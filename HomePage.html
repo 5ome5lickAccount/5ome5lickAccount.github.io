@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Chess: The Greatest 1v1 Game
+        </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="interaction.js" defer></script>
+        <script src="js/validation.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/model.js"></script>
+        <script src="js/controller.js"></script>
+        <script>
+            $(document).ready(function () {initValidation("#vForm");})
+        </script>
+        <link rel="shortcut icon" href="Cool gamer.png">
+    </head>
+
+    <body>
+
+        <header id="top">
+            <div id="title">
+                <h1>Chess</h1>
+                <h3>An old game for modern gamers</h3>
+            </div>
+        </header>
+
+        <aside id="side">
+            <nav>
+                <button id="hButton">Home</button>
+                <button id="cButton">Contact Information</button>
+                <button id="lButton">Misc. Links</button>
+                <button id="vButton">Visitors</button>
+            </nav>
+        </aside>
+
+        <main>
+
+            <article id="home">
+                <h2>...So What?</h2>
+                <p>For those who are unaquainted with chess, it is a game where both players take turns moving their pieces. They can only move one piece every turn. The goal is to trap the enemy king and threaten him with capture.</p>
+                <p>Now, while this might be a stretch of the imagination, but this was one of the first popular turn-based strategy games which is on a grid. Games like <i>Fire Emblem</i> frequently take place on a grid-like space. And while the rules between these two games are very different, there is a strong possibility that this is the original game which gave inspiration for the grid board.</p>
+                <p>For those of you who are actually interested in the history of chess, you can go ahead and watch this video below from YouTube.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YeB-1F-UKO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+            <section id="contact">
+                <h2>Contact information</h2>
+                <p>Website Author: Christian Hansen</p>
+                <p>Email: not5osecre1email@gmail.com
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                Please do not expect an instant response.</p>
+            </section>
+
+            <section id="links">
+                <a href="https://www.chess.com/"><p>Chess.com</p></a>
+                <p>Chess.com is a great place to start online chess play. Additionally, there are lessons built into the website. Whether you choose to pay for more frequent access to learning modules, or are alright with learning one once a week, it's a great place to go in general.</p>
+                <p>It's also a user-friendly site, and for anyone of any skill level.</p>
+                <figure><img src="Chess.com screenshot.png" id="screenshot" alt="A screenshot from chess.com"><figcaption>A screenshot from chess.com</figcaption></figure>
+                <p><br></p>
+                <a href="https://en.wikipedia.org/wiki/Chess">A Wikipedia article about chess</a>
+                <p>This should give a good history of chess in text form if you didn't watch the video. There should also be more information.</p>
+            </section>
+
+            <section id="vPage">
+                <form id="vForm">
+                    <h2>Visitor Form</h2>
+                    <ul id=formList>
+                        <li id="getFirstName" style="flex-basis: 100px">
+                            <label for="fName">First Name</label>
+                            <input type="text" id="fName" name="fName" required>
+                            <div></div>
+                        </li>
+                        <li id="getLastName" style="flex-basis: 100px">
+                            <label for="lName">Last Name</label>
+                            <input type="text" id="lName" name="lName" required>
+                            <div></div>
+                        </li>
+                        <li id="getAddress" style="flex-basis: 100px">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                            <div></div>
+                        </li>
+                        <li id="getCity" style="flex-basis: 100px">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                            <div></div>
+                        </li>
+                        <li id="getState" style="flex-basis: 100px">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="ex. NY" minlength=2 maxlength=2 required>
+                            <div></div>
+                        </li>
+                        <li id="getZip" style="flex-basis: 100px">
+                            <label for="zip">Zip</label>
+                            <input type="text" id="zip" name="zip" pattern="[0-9]{5}" required>
+                            <div></div>
+                        </li>
+                        <li id="getEmail" style="flex-basis: 100px">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                            <div></div>
+                        </li>
+                        <li id="getPhone" style="flex-basis: 100px">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required>
+                            <div></div>
+                        </li>
+                        <h3>How did you find this site?</h3>
+                        <li>
+                            <input type="checkbox" id="source1" name="source">
+                            <label for="source1">Google</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="source2" name="source">
+                            <label for="source2">Friend</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="source3" name="source">
+                            <label for="source1">Digital Advertisement</label>
+                        </li>
+                        <li>
+                            <div id="source"></div>
+                        </li>
+                        <li>
+                            <textarea id="comments" name="comments" cols=40 rows=4 placeholder="Any additional comments go here"></textarea>
+                        </li>
+                        <li>
+                            <button type="submit" id="submitBtn">Submit</button>
+                        </li>
+                        <li>
+                            <button id="cancel">Cancel</button>
+                        </li>
+                    </ul>
+                </form>
+                <table id="visitorTable">
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th class="hidden">Id</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+                <button id="addV">Log visit</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Please do not cite this website for any academic reasons or purposes. The creator of this website is not liable for any mockery that ensues from citing this website in an academic or scientific paper.</p>
+        </footer>
+
+    </body>
+</html>
